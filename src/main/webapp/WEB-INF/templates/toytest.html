@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<h1 th:text="${session.loggedInUser}" th:unless = "${session==null}"></h1>
+
 <div th:each = "product:${products}">
     <p th:text ="${product.title}"></p>
     <p th:text ="${product.brand}"></p>
